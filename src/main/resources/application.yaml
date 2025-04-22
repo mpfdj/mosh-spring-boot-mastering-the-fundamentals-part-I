@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: store
+stripe:
+  apiUrl: https://api.stripe.com
+  enabled: 'true'
+  timeout: '1000'
+  supported-currencies: USD,EUR,GBP
+payment-gateway: paypal
+
+
+user:
+  registration:
+    service:
+      mailserver-host: https://smtp.gmail.com
+      mailserver-port: 5761
