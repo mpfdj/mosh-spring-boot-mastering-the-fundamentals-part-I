@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: store
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: admin
+    driver-class-name: oracle.jdbc.OracleDriver
+stripe:
+  apiUrl: https://api.stripe.com
+  timeout: 1000
+  enabled: true
+  supported-currencies: USD,EUR,GBP
+payment-gateway: paypal
+mail:
+  host: https://smtp.gmail.com
+  port: 5761

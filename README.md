@@ -16,3 +16,7 @@ OOP - Open Closed principle
 
 # .mvn\wrapper\maven-wrapper.properties' because it does not exist
 mvn wrapper:wrapper
+
+
+# Run Spring-boot application
+mvnw.cmd spring-boot:run
