@@ -20,3 +20,7 @@ mvn wrapper:wrapper
 
 # Run Spring-boot application
 mvnw.cmd spring-boot:run
+
+
+# IntelliJ plugins
+JPA Buddy
