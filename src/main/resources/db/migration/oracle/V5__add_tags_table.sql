@@ -1,7 +1,7 @@
 create table tags
 (
     id   NUMBER
-         constraint tags_pk
+         constraint pk_tags
          primary key,
     name varchar(255) not null
 )
@@ -11,14 +11,14 @@ create table tags
 create table user_tags
 (
     user_id NUMBER not null
-                   constraint user_tags_USERS_ID_fk
+                   constraint fk_user_tags_users
                    references users (id)
                    on delete cascade,
     tag_id  NUMBER not null
-                   constraint user_tags_TAGS_ID_fk
+                   constraint fk_user_tags_tags
                    references tags (id)
                    on delete cascade,
-    constraint user_tags_pk
-        primary key (user_id, tag_id)
+    constraint pk_user_tags
+    primary key (user_id, tag_id)
 )
 /

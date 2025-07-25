@@ -1,7 +1,7 @@
 create table profiles
 (
     id             NUMBER
-                   constraint profiles_USERS_ID_fk
+                   constraint fk_profiles_users
                    references users (id),
     bio            clob,
     phone_number   varchar(15),
