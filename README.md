@@ -29,3 +29,11 @@ JPA Buddy
 # Strategies
 Database first
 Model first
+
+
+# Some other tutorials
+https://medium.com/@anders.swanson.93/learn-spring-jpa-by-example-with-oracle-database-free-part-i-141465f4f2c9
+
+
+# Notes
+There is not equivalent of Oracle XE createDatabaseIfNotExist=true, this is a MySQL feature...
