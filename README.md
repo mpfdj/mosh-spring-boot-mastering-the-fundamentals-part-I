@@ -24,3 +24,8 @@ mvnw.cmd spring-boot:run
 
 # IntelliJ plugins
 JPA Buddy
+
+
+# Strategies
+Database first
+Model first
