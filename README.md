@@ -37,3 +37,16 @@ https://medium.com/@anders.swanson.93/learn-spring-jpa-by-example-with-oracle-da
 
 # Notes
 There is not equivalent of Oracle XE createDatabaseIfNotExist=true, this is a MySQL feature...
+
+
+
+# Loading strategies
+
+Eager loading (for required data)
+- @OneToOne
+- @ManyToOne
+
+Lazy loading (for optional data)
+- @OneToMany
+- @ManyToMany
+

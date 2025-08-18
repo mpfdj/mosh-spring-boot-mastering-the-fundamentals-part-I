@@ -8,6 +8,8 @@ spring:
     driver-class-name: oracle.jdbc.OracleDriver
   flyway:
     locations: classpath:db/migration/{vendor}
+  jpa:
+    show-sql: true
 
 # https://dev.to/kpldvnpne/how-to-enable-debug-logs-in-flyway-2b0g
 logging:
