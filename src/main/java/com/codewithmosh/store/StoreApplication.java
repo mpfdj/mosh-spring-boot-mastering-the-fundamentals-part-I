@@ -37,8 +37,10 @@ public class StoreApplication {
 
         var service = context.getBean(UserService.class);
 //        service.showEntityStates();
-        service.showRelatedEntities();
-
+//        service.showRelatedEntities();
+//        service.fetchAddress();
+//        service.persistRelated();
+        service.deleteRelated();
 
     }
 

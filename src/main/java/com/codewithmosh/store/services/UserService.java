@@ -1,6 +1,8 @@
 package com.codewithmosh.store.services;
 
+import com.codewithmosh.store.entities.Address;
 import com.codewithmosh.store.entities.User;
+import com.codewithmosh.store.repositories.AddressRepository;
 import com.codewithmosh.store.repositories.ProfileRepository;
 import com.codewithmosh.store.repositories.UserRepository;
 import jakarta.persistence.EntityManager;
@@ -15,6 +17,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final ProfileRepository profileRepository;
     private final EntityManager entityManager;
+    private final AddressRepository addressRepository;
 
     @Transactional
     public void showEntityStates() {
@@ -53,6 +56,40 @@ public class UserService {
         var profile = profileRepository.findById(7L).orElseThrow();
 //        System.out.println(profile.getBio());
         System.out.println(profile.getUser().getEmail());
+    }
+
+    public void fetchAddress() {
+        var address = addressRepository.findById(1L).orElseThrow();
+    }
+
+
+    public void persistRelated() {
+        var user = User.builder()
+                .name("John Doe")
+                .email("john.doe@example.com")
+                .password("password")
+                .build();
+
+        var address = Address.builder()
+                .street("street")
+                .city("city")
+                .state("state")
+                .zip("zip")
+                .build();
+
+        user.addAddress(address);
+        userRepository.save(user);
+    }
+
+    @Transactional
+    public void deleteRelated() {
+//        userRepository.deleteById(1L);
+
+        var user = userRepository.findById(2L).orElseThrow();
+        var address = user.getAddresses().getFirst();
+        user.removeAddress(address);
+        userRepository.save(user);
+
     }
 
 
